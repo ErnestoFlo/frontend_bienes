@@ -2,7 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { appSlice } from "./Slices/appSlice";
 import { secSlice } from "./Slices/secSlice";
-
+import { securityApi } from "./Services/Security";
+import { propertieApi } from "./Services/Properties";
 
 const preLoadedState = JSON.parse(localStorage.getItem('reduxState') || '{}');
 
