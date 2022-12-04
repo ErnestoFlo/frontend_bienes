@@ -6,23 +6,32 @@ import {
 } from "react-router-dom";
 import PrivateRoute from "@components/PrivateRoute";
 import PropertieNew from "@views/PropertieNew";
+import Home from "@views/Home";
 //import Propertie from "@views/Properties";
 import NotFound from "@views/NotFound";
 
 const Routes = () => {
-    return(
+    return (
         <Router>
             <Switch>
+                <Route path="/" element={<Navigate to="/home" />} />
                 <Route
-                    path="/properties/create"
+                    path="/home"
                     element={
                         <PrivateRoute allowedRoles={["public", "admin"]}>
-                            <PropertieNew/>
+                            <Home />
                         </PrivateRoute>
                     }
                 />
+                
+                <Route
+                    path="/properties/create"
+                    element={
+                        <PropertieNew />
+                    }
+                />
 
-                <Route path="*" element={<NotFound/>} />
+                <Route path="*" element={<NotFound />} />
             </Switch>
         </Router>
     );

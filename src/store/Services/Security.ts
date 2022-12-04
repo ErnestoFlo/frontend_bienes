@@ -4,7 +4,7 @@ export const securityApi = createApi({
   reducerPath: 'securityApi',
   baseQuery: fetchBaseQuery(
       {
-        baseUrl: `${process.env.REACT_APP_API_BASE_URL}/security`,
+        baseUrl: `${process.env.REACT_APP_APPI_BASE_URL}/create`,
         prepareHeaders: (headers) => {
           headers.set('apikey', process.env.REACT_APP_API_KEY as string)
         }

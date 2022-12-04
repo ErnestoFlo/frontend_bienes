@@ -1,5 +1,5 @@
 import PropertieUx from "./PropertieNewUx";
-import { useNewPropertieMutation, INewPropertie } from "src/store/Services/Properties";
+import { useNewPropertieMutation, INewPropertie } from "@store/Services/Properties";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

@@ -96,15 +96,6 @@ const PropertieUx = ({
                 />
 
                 <Field
-                    name="garage"
-                    labelText="Garage"
-                    value={form.garage}
-                    onChange={(e) => {
-                        onChangeHandler(e.target.name, e.target.value);
-                    }}
-                />
-
-                <Field
                     name="terraza"
                     labelText="Terraza"
                     value={form.terraza}

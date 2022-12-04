@@ -1,7 +1,7 @@
-import { setShowMenu, selectShowMenu } from "src/store/Slices/appSlice";
+import { setShowMenu, selectShowMenu } from "@store/Slices/appSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { selectAuth, resetSecData } from "src/store/Slices/secSlice";
+import { selectAuth, resetSecData } from "@store/Slices/secSlice";
 
 import {BiLogIn, BiLogOut, BiUser, BiUserPlus } from 'react-icons/bi';
 

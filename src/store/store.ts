@@ -11,13 +11,13 @@ export const store = configureStore({
   reducer: {
     app: appSlice.reducer,
     sec: secSlice.reducer,
-    //[securityApi.reducerPath]: securityApi.reducer,
-    //[cashFlowApi.reducerPath]: cashFlowApi.reducer,
+    [securityApi.reducerPath]: securityApi.reducer,
+    [propertieApi.reducerPath]: propertieApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
-      //securityApi.middleware,
-      //cashFlowApi.middleware,
+      securityApi.middleware,
+      propertieApi.middleware,
     ]),
   preloadedState: preLoadedState,
 });

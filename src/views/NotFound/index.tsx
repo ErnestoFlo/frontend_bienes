@@ -9,7 +9,7 @@ const NotFound = () => {
       <section className="notfound">
         <BiBlock size="10rem" color={"#F52220"}/>
         <br/>
-        <h1>404 Not Found</h1>
+        <h1>404 Not Found, Intenta</h1>
       </section>
     </Page>
   );

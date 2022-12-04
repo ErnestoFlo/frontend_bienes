@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setShowMenu, selectShowMenu } from "src/store/Slices/appSlice";
+import { setShowMenu, selectShowMenu } from "@store/Slices/appSlice";
 import "./navbar.css";
 import NavToggle from "../NavToggle";
 import Menu from "../Menu";
