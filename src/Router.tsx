@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import PrivateRoute from "@components/PrivateRoute";
 import PropertieNew from "@views/PropertieNew";
+import Login from "@views/Login";
 import Home from "@views/Home";
 import NavBar from "@views/NavBar";
 //import Propertie from "@views/Properties";
@@ -15,6 +16,7 @@ const Routes = () => {
     return (
         <Router>
             <Switch>
+                <Route path="/login" element={<Login />} />
                 <Route path="/" element={<Navigate to="/home" />} />
                 <Route
                     path="/home"
