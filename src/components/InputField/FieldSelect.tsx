@@ -1,5 +1,6 @@
 import { InputHTMLAttributes } from 'react';
-import './Field.css';
+//import './Field.css';
+import './Input.css';
 export interface IFieldSelectProps extends InputHTMLAttributes<HTMLSelectElement> {
   name?: string;
   labelText?: string;

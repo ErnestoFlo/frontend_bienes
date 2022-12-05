@@ -7,6 +7,7 @@ import {
 import PrivateRoute from "@components/PrivateRoute";
 import PropertieNew from "@views/PropertieNew";
 import Home from "@views/Home";
+import NavBar from "@views/NavBar";
 //import Propertie from "@views/Properties";
 import NotFound from "@views/NotFound";
 
@@ -28,6 +29,13 @@ const Routes = () => {
                     path="/properties/create"
                     element={
                         <PropertieNew />
+                    }
+                />
+
+                <Route
+                    path="/register"
+                    element={
+                        <NavBar />
                     }
                 />
 

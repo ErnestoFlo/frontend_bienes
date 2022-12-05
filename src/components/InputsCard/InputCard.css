@@ -1,0 +1,21 @@
+.InputCard{
+    height: 400px;
+    width: 370px;
+    border-radius: 8px;
+    background-color: white;
+    border: 3px solid #57CC99;
+    position: absolute;
+    top: 18%;
+    left: 34%;
+    margin: -25px 0 0 -25px;
+
+    padding-left: 55px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    
+}
