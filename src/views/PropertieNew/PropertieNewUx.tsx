@@ -131,15 +131,6 @@ const PropertieUx = ({
                     }}
                 />
 
-                <Field
-                    name="idPropietario"
-                    labelText="ID propietario"
-                    value={form.idPropietario}
-                    onChange={(e) => {
-                        onChangeHandler(e.target.name, e.target.value);
-                    }}
-                />
-
                 <ActionField>
                         <PrimaryButton
                             onClick={(e) => {

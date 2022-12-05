@@ -16,8 +16,7 @@ const PropertieNew = () => {
         terraza: "",
         direccion: "",
         nombreCompleto: "",
-        email: "",
-        idPropietario: ""
+        email: ""
     });
 
     const [newPropertie, {isLoading, error}] = useNewPropertieMutation();

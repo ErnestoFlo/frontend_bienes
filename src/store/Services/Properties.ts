@@ -40,7 +40,6 @@ export interface INewPropertie {
     direccion: string;
     nombreCompleto: string;
     email: string;
-    idPropietario: string
 }
 
 //Creamos la Api con sus ednPoint correspondientes los cuales nos permitiran realizar
