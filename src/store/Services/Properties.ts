@@ -23,7 +23,8 @@ export interface IPropertie {
         email: string,
         idPropietario: { type: ObjectId, ref: "IUser" }
     ];
-    _id?: unknown;
+    _id: string;
+    type: string;
 }
 
 //Esta es una interfaz que nos permite crear o agregar una nueva propiedad a la app
@@ -65,9 +66,7 @@ export const propertieApi = createApi({
     tagTypes: ["Propertie"],
     endpoints: (builder) => ({
         allPropertie: builder.query({
-            query: ({ page = 1, items = 10 }) => ({
-                url: `page=${page}&items=${items}`,
-            }),
+            query: ()=>"/AllProperties",
             providesTags: ["Propertie"]
         }),
         newPropertie: builder.mutation({

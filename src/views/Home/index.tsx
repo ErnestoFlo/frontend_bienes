@@ -16,6 +16,11 @@ const Home = () => {
       <Link to="/properties/create">
         <Button>Ingresar</Button>
       </Link>
+
+      <Link to="/properties">
+        <Button>Ingresar</Button>
+      </Link>
+
     </Page>
   );
 }

@@ -17,8 +17,8 @@ import ErrorField from "@components/ErrorField";
 export interface IUserUXProps {
     email: string;
     setEmail: (email: string) => void;
-    user: string;
-    setUser: (user: string) => void;
+    name: string;
+    setName: (user: string) => void;
     password: string;
     setPassword: (password: string) => void;
     error: any;
@@ -30,8 +30,8 @@ const SignUp = ({
     setEmail,
     password,
     setPassword,
-    user,
-    setUser,
+    name,
+    setName,
     error,
     handleClick
   } : IUserUXProps) => {
@@ -46,12 +46,12 @@ const SignUp = ({
             <Background>
                 <InputCard>
                     <h2>Registrarse</h2>
-                    <InputTXT name="nombre" value={user} onChange={(e) => setUser(e.target.value)} title="nombre" placeholder="Nombre" />
+                    <InputTXT name="nombre" value={name} onChange={(e) => setName(e.target.value)} title="nombre" placeholder="Nombre" />
                     <InputTXT name="correo" value={email} onChange={(e) => setEmail(e.target.value)} title="correo" placeholder="Correo" />
-                    <InputTXT name="contrasena" value={password} onChange={(e) => setPassword(e.target.value)} title="contrasena" placeholder="Contraseña" />
+                    <InputTXT name="contrasena" type="password" value={password} onChange={(e) => setPassword(e.target.value)} title="contrasena" placeholder="Contraseña" />
                     <div className="">
                     
-                        <Link to="/home">
+                        <Link to="/login">
                             {error && <ErrorField>{error?.data?.error}</ErrorField>}
                             <Button onClick={handleClick}>Registrase!</Button>
                         </Link>

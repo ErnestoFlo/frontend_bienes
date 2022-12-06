@@ -9,20 +9,20 @@ const IndSignUp  = () => {
   const Navigator = useNavigate();
 
   const [email, setEmail] = useState("");
-  const [user, setUser] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleClick = async () => {
-    const  data = await signin({ email, user, password }).unwrap();
+    const  data = await signin({ email, name, password }).unwrap();
     console.log(data);
-    Navigator("/home");
+    Navigator("/login");
   }
   return (
     <SignUp
       email={email}
       setEmail={setEmail}
-      user={user}
-      setUser={setUser}
+      name={name}
+      setName={setName}
       password={password}
       setPassword={setPassword}
       handleClick={handleClick}
