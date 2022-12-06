@@ -38,8 +38,14 @@ export interface INewPropertie {
     garage: string;
     terraza: string;
     direccion: string;
-    nombreCompleto: string;
-    email: string;
+}
+
+export interface IGetAllProperties {
+    total: number;
+    totalPages: number;
+    page: number;
+    itemsPerPage: number;
+    items: IPropertie[];
 }
 
 //Creamos la Api con sus ednPoint correspondientes los cuales nos permitiran realizar
@@ -52,24 +58,30 @@ export const propertieApi = createApi({
             headers.set("apikey", process.env.REACT_APP_API_KEY as string);
             const token = (getState() as RootState).sec.token;
             if (token) {
-                headers.set("Autorization", `Bearer ${token}`);
+                headers.set("Authorization", `Bearer ${token}`);
             }
         }
     }),
     tagTypes: ["Propertie"],
     endpoints: (builder) => ({
+        allPropertie: builder.query({
+            query: ({ page = 1, items = 10 }) => ({
+                url: `page=${page}&items=${items}`,
+            }),
+            providesTags: ["Propertie"]
+        }),
         newPropertie: builder.mutation({
             query: (body: INewPropertie) => {
-              return {
-                url: "create",
-                method: "POST",
-                body
-              }
+                return {
+                    url: "create",
+                    method: "POST",
+                    body
+                }
             },
             invalidatesTags: ["Propertie"]
         })
     })
 });
 
-export const { useNewPropertieMutation } = propertieApi;
+export const { useNewPropertieMutation, useAllPropertieQuery } = propertieApi;
 

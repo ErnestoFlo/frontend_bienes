@@ -9,7 +9,7 @@ import PropertieNew from "@views/PropertieNew";
 import Login from "@views/Login";
 import Home from "@views/Home";
 import NavBar from "@views/NavBar";
-//import Propertie from "@views/Properties";
+import Propertie from "@views/Properties";
 import NotFound from "@views/NotFound";
 
 const Routes = () => {
@@ -26,11 +26,22 @@ const Routes = () => {
                         </PrivateRoute>
                     }
                 />
-                
+
+                <Route
+                    path="/properties"
+                    element={
+                        <PrivateRoute allowedRoles={["public", "admin"]}>
+                            <Propertie/>
+                        </PrivateRoute>
+                    }
+                />
+
                 <Route
                     path="/properties/create"
                     element={
-                        <PropertieNew />
+                        <PrivateRoute allowedRoles={["public", "admin"]}>
+                            <PropertieNew />
+                        </PrivateRoute>
                     }
                 />
 

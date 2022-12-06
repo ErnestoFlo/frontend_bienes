@@ -14,9 +14,7 @@ const PropertieNew = () => {
         banios: "",
         garage: "",
         terraza: "",
-        direccion: "",
-        nombreCompleto: "",
-        email: ""
+        direccion: ""
     });
 
     const [newPropertie, {isLoading, error}] = useNewPropertieMutation();
@@ -30,7 +28,7 @@ const PropertieNew = () => {
         try {
             const data = await newPropertie(form).unwrap();
             console.log(data);
-            Navigate("/create");
+            Navigate("/home");
         } catch (error) {
             console.log(error);
         }
@@ -38,7 +36,7 @@ const PropertieNew = () => {
 
     const onCancelHandler = () => {
         console.log('cancel');
-        Navigate("/create");
+        Navigate("/home");
     }
     return (
         <PropertieUx

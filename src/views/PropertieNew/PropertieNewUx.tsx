@@ -144,25 +144,6 @@ const PropertieUx = ({
                         }}
                     />
 
-                    <Field
-                        name="nombreCompleto"
-                        labelText="Nombre propietario"
-                        placeholder="Nombre propietario"
-                        value={form.nombreCompleto}
-                        onChange={(e) => {
-                            onChangeHandler(e.target.name, e.target.value);
-                        }}
-                    />
-
-                    <Field
-                        name="email"
-                        labelText="Email"
-                        placeholder="Email"
-                        value={form.email}
-                        onChange={(e) => {
-                            onChangeHandler(e.target.name, e.target.value);
-                        }}
-                    />
                     </ColumnCard>
                     
                     <ButtonOrientation>
@@ -176,15 +157,13 @@ const PropertieUx = ({
                     >Publicar
                     </Button>
 
-                    <Link to="/home">
-                    <CancelButton
-                        onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            onCancelHandler();
-                        }}
-                    >Cancelar</CancelButton>
-                    </Link>
+                        <CancelButton
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                onCancelHandler();
+                            }}
+                        >Cancelar</CancelButton>
                     
                     </ButtonOrientation>
 
