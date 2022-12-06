@@ -10,6 +10,7 @@ import Button from "@components/NavBarButton";
 import NavBarCard from "@components/NavBarCard";
 import InputCard from "@components/InputsCard";
 import InputTXT from "@components/InputTxt";
+import "./Login.css"
 
 export interface ILoginUXProps {
     email: string;
@@ -31,14 +32,14 @@ const Login = ({
     return (
         <div>
             <NavBarCard >
-                    <h2>Logo</h2>
-                    <Link to="/register">
-                        <Button> Registrarse </Button>
-                    </Link>
+                <h1>SEDAHE</h1>
+                <Link to="/register">
+                    <Button> Registrarse </Button>
+                </Link>
             </NavBarCard >
-            <section>  
+            <section>
                 <InputCard>
-                    <h2>Iniciar Sesion</h2>
+                    <h2 className="texto">Iniciar Sesion</h2>
                     <InputTXT
                         placeholder="Email"
                         value={email}
@@ -57,7 +58,7 @@ const Login = ({
                     </Link>
 
                 </InputCard>
-            </section>  
+            </section>
         </div>
     );
 };
