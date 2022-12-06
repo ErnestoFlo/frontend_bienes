@@ -1,15 +1,16 @@
 .ColumnCard{
-    height: 40%;
-    width: 16%;
-    background-color: transparent;
-    border: 1px solid #000;
-    position: absolute;
+    height: 450px;
+    width: 50%;
+    /*background-color: transparent;
+    border: 1px solid #000;*/
+    /*position: absolute;*/
 
+    /*
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: flex-start;*/
 
 }

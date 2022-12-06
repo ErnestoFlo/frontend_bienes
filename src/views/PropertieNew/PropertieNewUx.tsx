@@ -8,6 +8,7 @@ import Button from "@components/NavBarButton";
 import CancelButton from "@components/CancelButton";
 import CreateCard from "@components/CreateCard";
 import ColumnCard from "@components/ColumnCard";
+import ButtonOrientation from "@components/ButtonOrientation";
 
 export interface IPropertieUx {
     form: INewPropertie;
@@ -30,6 +31,7 @@ const PropertieUx = ({
 
             <section>
                 <CreateCard>
+                    <ColumnCard>
                     <Field
                         name="titulo"
                         labelText="Titulo"
@@ -91,6 +93,9 @@ const PropertieUx = ({
                             onChangeHandler(e.target.name, e.target.value);
                         }}
                     />
+                    </ColumnCard>
+                    
+                    <ColumnCard>
                     <Field
                         name="banios"
                         labelText="Baños"
@@ -151,9 +156,9 @@ const PropertieUx = ({
                             onChangeHandler(e.target.name, e.target.value);
                         }}
                     />
-
-
-
+                    </ColumnCard>
+                    
+                    <ButtonOrientation>
                     <Button
                         onClick={(e) => {
                             e.preventDefault();
@@ -169,6 +174,9 @@ const PropertieUx = ({
                             onCancelHandler();
                         }}
                     >Cancelar</CancelButton>
+                    </ButtonOrientation>
+
+                    
                 </CreateCard>
 
 
