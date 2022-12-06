@@ -9,6 +9,13 @@ import CancelButton from "@components/CancelButton";
 import CreateCard from "@components/CreateCard";
 import ColumnCard from "@components/ColumnCard";
 import ButtonOrientation from "@components/ButtonOrientation";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes as Switch,
+    Navigate,
+    Link
+} from "react-router-dom";
 
 export interface IPropertieUx {
     form: INewPropertie;
@@ -159,6 +166,7 @@ const PropertieUx = ({
                     </ColumnCard>
                     
                     <ButtonOrientation>
+
                     <Button
                         onClick={(e) => {
                             e.preventDefault();
@@ -167,6 +175,8 @@ const PropertieUx = ({
                         }}
                     >Publicar
                     </Button>
+
+                    <Link to="/home">
                     <CancelButton
                         onClick={(e) => {
                             e.preventDefault();
@@ -174,6 +184,8 @@ const PropertieUx = ({
                             onCancelHandler();
                         }}
                     >Cancelar</CancelButton>
+                    </Link>
+                    
                     </ButtonOrientation>
 
                     

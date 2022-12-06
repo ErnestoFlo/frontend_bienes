@@ -1,3 +1,11 @@
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes as Switch,
+    Navigate,
+    Link
+} from "react-router-dom";
+
 import Button from "@components/NavBarButton";
 import NavBarCard from "@components/NavBarCard";
 import Background from "@components/Background";
@@ -10,7 +18,9 @@ const NavBar = () => {
         <div>
             <NavBarCard >
                 <h2>Logo</h2>
-                <Button> Iniciar Sesión </Button>
+                <Link to="/login">
+                    <Button> Iniciar Sesión </Button>  
+                </Link>
             </NavBarCard >  
             <Background>
                 <InputCard>
@@ -19,8 +29,14 @@ const NavBar = () => {
                     <InputTXT title="correo" placeholder="Correo" />
                     <InputTXT title="contrasena" placeholder="Contraseña" />
                     <div className="">
-                        <Button>Registrase!</Button>
-                        <CancelButton>Cancelar</CancelButton>
+                    
+                        <Link to="/home">
+                            <Button>Registrase!</Button>
+                        </Link>
+
+                        <Link to="/login">
+                            <CancelButton>Cancelar</CancelButton>
+                        </Link>
                     </div>
                 </InputCard>
             </Background>

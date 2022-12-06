@@ -1,3 +1,11 @@
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes as Switch,
+    Navigate,
+    Link
+} from "react-router-dom";
+
 import Button from "@components/NavBarButton";
 import NavBarCard from "@components/NavBarCard";
 import InputCard from "@components/InputsCard";
@@ -24,7 +32,9 @@ const Login = ({
         <div>
             <NavBarCard >
                     <h2>Logo</h2>
-                    <Button> Registrarse </Button>
+                    <Link to="/register">
+                        <Button> Registrarse </Button>
+                    </Link>
             </NavBarCard >
             <section>  
                 <InputCard>
@@ -42,7 +52,10 @@ const Login = ({
                         type="password"
                     />
                     {error && <p>{JSON.stringify(error)}</p>}
-                    <Button onClick={handleClick}>Ingresar</Button>
+                    <Link to="/home">
+                        <Button onClick={handleClick}>Ingresar</Button>
+                    </Link>
+
                 </InputCard>
             </section>  
         </div>
