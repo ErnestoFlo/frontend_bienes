@@ -6,14 +6,14 @@ import { ObjectId } from "mongodb";
 //Creamos la interfaz que nos ayudará a poder visualizar los datos de la entidad
 export interface IPropertie {
     titulo: string;
-    precio: number;
+    precio: string;
     descripcion: string;
     imagen?: string;
     fechaPublic?: Date;
     tipo: string[];
     area: string;
-    habitaciones: number;
-    banios: number;
+    habitaciones: string;
+    banios: string;
     estado: string[];
     garage: string;
     terraza: string;
@@ -29,12 +29,12 @@ export interface IPropertie {
 //Esta es una interfaz que nos permite crear o agregar una nueva propiedad a la app
 export interface INewPropertie {
     titulo: string;
-    precio: number;
+    precio: string;
     descripcion: string;
     tipo: string;
     area: string;
     habitaciones: string;
-    banios: number;
+    banios: string;
     garage: string;
     terraza: string;
     direccion: string;

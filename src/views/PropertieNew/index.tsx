@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 const PropertieNew = () => {
     const [form, setForm] = useState<INewPropertie>({
         titulo: "",
-        precio: 0,
+        precio: "",
         descripcion: "",
         tipo: "",
         area: "",
         habitaciones: "",
-        banios: 0,
+        banios: "",
         garage: "",
         terraza: "",
         direccion: "",

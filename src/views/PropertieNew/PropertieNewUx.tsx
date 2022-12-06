@@ -46,8 +46,8 @@ const PropertieUx = ({
                         name="precio"
                         labelText="Precio"
                         placeholder="Precio"
-                        //value={String(form.precio)}
-                        type="text"
+                        value={form.precio}
+                        //type="text"
                         onChange={(e) => {
                             onChangeHandler(e.target.name, e.target.value);
                         }}
@@ -87,8 +87,8 @@ const PropertieUx = ({
                         name="habitaciones"
                         labelText="Habitaciones"
                         placeholder="Habitaciones"
-                        //value={String(form.habitaciones)}
-                        type="text"
+                        value={form.habitaciones}
+                        //type="text"
                         onChange={(e) => {
                             onChangeHandler(e.target.name, e.target.value);
                         }}
@@ -100,8 +100,8 @@ const PropertieUx = ({
                         name="banios"
                         labelText="Baños"
                         placeholder="Baños"
-                        //value={String(form.banios)}
-                        type="text"
+                        value={form.banios}
+                        //type="text"
                         onChange={(e) => {
                             onChangeHandler(e.target.name, e.target.value);
                         }}
