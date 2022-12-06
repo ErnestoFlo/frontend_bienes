@@ -8,7 +8,7 @@ import PrivateRoute from "@components/PrivateRoute";
 import PropertieNew from "@views/PropertieNew";
 import Login from "@views/Login";
 import Home from "@views/Home";
-import NavBar from "@views/NavBar";
+import IndSignUp from "@views/NavBar";
 import Propertie from "@views/Properties";
 import NotFound from "@views/NotFound";
 
@@ -48,7 +48,7 @@ const Routes = () => {
                 <Route
                     path="/register"
                     element={
-                        <NavBar />
+                        <IndSignUp />
                     }
                 />
 
