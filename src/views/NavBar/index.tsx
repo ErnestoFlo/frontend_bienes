@@ -28,7 +28,7 @@ const IndSignUp  = () => {
       handleClick={handleClick}
       error={error}
     />
-  );
+  );  
 }
 
 export default IndSignUp ;
