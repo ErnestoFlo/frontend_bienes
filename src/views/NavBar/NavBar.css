@@ -1,0 +1,19 @@
+div
+{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(#C7F9CC, white);
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+back{
+    width: 1000px;
+    height: 1000px;
+    background-image: linear-gradient(yellow, red);
+}

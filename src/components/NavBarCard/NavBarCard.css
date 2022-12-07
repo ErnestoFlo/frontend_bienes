@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: 3px solid #80ED99;
+}

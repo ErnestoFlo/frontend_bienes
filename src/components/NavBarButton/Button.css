@@ -1,0 +1,30 @@
+.basicbutton {
+    font-family: 'Montserrat', sans-serif;
+
+    padding:0.75rem 1rem;
+    margin: 5px;
+
+    background-color: #57CC99;
+    color: white;
+ 
+    border-color: transparent;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    /*box-shadow: 1px 1px 3px rgba(0,0,0,0.5);*/
+    cursor:pointer;
+
+    transition: all 0.5s ease;
+  }
+
+.basicbutton:hover{
+    background-color: white;
+    color: #57CC99;
+ 
+    border: 3px solid #57CC99;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    /*box-shadow: 1px 1px 3px rgba(0,0,0,0.5);*/
+    cursor:pointer;
+}

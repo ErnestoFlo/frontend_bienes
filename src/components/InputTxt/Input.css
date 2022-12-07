@@ -1,0 +1,10 @@
+input{
+    width: 75%;
+    height: 1.8rem;
+    border-radius: 5px;
+    border: #92DDBD solid 3px;
+    font-family: 'Montserrat', sans-serif;
+    transition: border .3s ease;
+
+    margin: 10px;
+}
